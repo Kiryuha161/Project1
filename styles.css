@@ -1,0 +1,119 @@
+body {
+    background-color: #21192A;
+    width: 100%;
+}
+
+.navigation {
+    width: 1200px;
+    height: 80px;
+    background-color: white;
+    border-radius: 50px;
+    position: absolute;
+    top: 20px;
+    left: 17%;
+}
+
+.navigation img {
+    position: absolute;
+    left: 50px;
+    height: 50px;
+    width: 80px;
+}
+
+.roboit {
+    position: absolute;
+    top: 30px;
+    left: 60px;
+    font-weight: bold;
+}
+
+.logo {
+    transform: translate(0, 5px);
+}
+
+ul {
+    width: 1150px;
+    list-style-type: none;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+li {
+    display: inline;
+    padding: 0 20px;
+    font-size: 20px;
+    transform: translate(0, 15px);
+    color: gray;
+}
+
+dl {
+    font-size: 22px;
+    padding: 50px 0 0 0;
+    width: 700px;
+}
+dd {
+    background-color: white;
+    height: 17px;
+    margin-bottom: 20px;
+    border-radius: 50px;
+    text-align: center;
+    background-color: white;
+  }
+
+.coding-ok {
+    width: 79%;
+    background-color: #cd00cd;
+    z-index: -1;
+}
+
+.accuracy {
+    width: 95%;
+    background-color: #cd00cd;
+}
+
+.planning {
+    width: 87%;
+    background-color: #cd00cd;
+}
+
+.container {
+    display: flex;
+}
+
+
+.who-we-are {
+    flex-direction: row;
+    width: 750px;
+    position: relative;
+    top: 150px;
+    right: -90px;
+    color: white;
+}
+
+    .who-we-are h2 {
+        text-decoration: underline #cd00cd;
+        text-decoration-thickness: 5px;
+        text-underline-offset: 15px;
+        text-align: center;
+    }
+
+    .who-we-are h3 {
+        font-size: 40px;
+        text-align: center;
+    }
+
+    .who-we-are p {
+        font-size: 22px;
+        text-align: center;
+    }
+
+.image-header {
+    flex-direction: row;
+    width: 934px;
+    height: 625px;
+    position: relative;
+    top: 80px;
+    transform: translate(-8px, 0);
+}
+
