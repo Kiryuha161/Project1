@@ -1,6 +1,7 @@
 body {
     background-color: #21192A;
     width: 100%;
+    color: white;
 }
 
 .navigation {
@@ -13,18 +14,19 @@ body {
     left: 17%;
 }
 
-.navigation img {
-    position: absolute;
-    left: 50px;
-    height: 50px;
-    width: 80px;
-}
+    .navigation img {
+        position: absolute;
+        left: 50px;
+        height: 50px;
+        width: 80px;
+    }
 
 .roboit {
     position: absolute;
     top: 30px;
-    left: 60px;
+    left: 50px;
     font-weight: bold;
+    color: black;
 }
 
 .logo {
@@ -52,29 +54,57 @@ dl {
     padding: 50px 0 0 0;
     width: 700px;
 }
+
 dd {
-    background-color: white;
+    background-image: linear-gradient(to right, #351BC0, #cd00cd);
     height: 17px;
     margin-bottom: 20px;
     border-radius: 50px;
-    text-align: center;
+    text-align: right;
     background-color: white;
-  }
+}
 
-.coding-ok {
-    width: 79%;
+.coding {
+    width: 71%;
     background-color: #cd00cd;
     z-index: -1;
 }
 
 .accuracy {
     width: 95%;
-    background-color: #cd00cd;
 }
 
 .planning {
     width: 87%;
-    background-color: #cd00cd;
+}
+
+.bar {
+    display: block;
+    position: absolute;
+    right: 9px;
+    width: 700px;
+    height: 17px;
+    background-color: white;
+    border-radius: 50px;
+    z-index: -1;
+}
+
+.coding-bar {
+    bottom: 258px;
+}
+
+.accuracy-bar {
+    bottom: 195px;
+}
+
+.planning-bar {
+    bottom: 132px;
+}
+
+.value {
+    position: relative;
+    right: -25px;
+    top: -25px;
 }
 
 .container {
@@ -88,25 +118,45 @@ dd {
     position: relative;
     top: 150px;
     right: -90px;
-    color: white;
 }
 
-    .who-we-are h2 {
-        text-decoration: underline #cd00cd;
-        text-decoration-thickness: 5px;
-        text-underline-offset: 15px;
-        text-align: center;
-    }
+.find-out-more-with {
+    display: block;
+    width: 1125px;
+    height: 1400px;
+    position: relative;
+    left: 290px;
+    top: 140px;
+    border: 1px solid white;
+}
 
-    .who-we-are h3 {
-        font-size: 40px;
-        text-align: center;
-    }
+h2 {
+    text-decoration: underline #cd00cd;
+    text-decoration-thickness: 5px;
+    text-underline-offset: 15px;
+    text-align: center;
+}
 
-    .who-we-are p {
-        font-size: 22px;
-        text-align: center;
-    }
+h3 {
+    font-size: 40px;
+    text-align: center;
+}
+
+.left-head {
+    float: left;
+}
+
+.right-head {
+    float: right;
+    position: relative;
+    top: 150px;
+    transform: translate(-218px, 0);
+}
+
+p {
+    font-size: 22px;
+    text-align: center;
+}
 
 .image-header {
     flex-direction: row;
@@ -116,4 +166,74 @@ dd {
     top: 80px;
     transform: translate(-8px, 0);
 }
+
+.find-out-more-with-image {
+    width: 550px;
+    height: 300px;
+}
+
+.virtual-reality-image {
+    position: relative;
+    right: 0;
+    float: left;
+}
+
+.augmented-reality-image {
+    position: absolute;
+    left: 575px;
+    top: 479px;
+    clear: both;
+}
+
+summary {
+    font-size: 30px;
+}
+
+.left-position-details {
+    clear: both;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.right-position-details {
+    clear: both;
+    position: relative;
+    top: 160px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/*Попробовать в верхнем свойстве настроить положение через абсолютную позицию*/
+
+.explore {
+    float: right;
+    position: absolute;
+    transform: translate(580px, 0);
+}
+
+.hint {
+    position: absolute;
+    width: 500px;
+    height: 145px;
+    font-size: 19px;
+}
+
+
+.bottom-left-block {
+    position: absolute;
+}
+
+.second-hint {
+    position: absolute;
+    transform: translate(580px, 30px);
+    clear: both;
+}
+
+.smart-glasses-image {
+    transform: translate(0, 60px);
+}
+    
+
+
+
 
