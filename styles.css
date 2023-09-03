@@ -248,80 +248,17 @@ summary {
     top: 170px;
 }
 
-.slider-block {
-    width: 1850px;
-    height: 500px;
-    position: relative;
-    top: 100px;
-    left: 0px;
-    /*border: 1px solid white;*/
-    background-color: #1A1424;
-}
-
-.wrapper {
+/*.wrapper {
     width: 1300px;
     height: 420px;
-    /*border: 1px solid white;*/
+    border: 1px solid white;
     position: absolute;
     bottom: 40px;
     left: 275px;
     background-color: #1A1424;
-}
+}/*
 
-.controls {
-    position: absolute;
-    bottom: 10px;
-    left: 600px;
-    text-align: center;
-}
-
-label {
-    display: inline-block;
-    width: 15px;
-    height: 15px;
-    background-color: white;
-    cursor: pointer;
-    border-radius: 50%;
-	transition: background ease-in-out .5s;
-}
-
-label:hover {
-    background-color: rgb(92, 7, 131);
-}
-    
-label:active {
-    background-color:rgb(139, 7, 201);
-}
-
-.radio {
-    position: absolute;
-    bottom: 10px;
-    left: 606px;
-    display: none;
-}
-
-input[type="radio"]:checked + label {
-    background-color: rgb(139, 7, 201);
-  }
-  
-
-.slider-block * {
-    margin: 0;
-    padding: 0;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    overflow: hidden;
-}
-
-.slider {
-    overflow: hidden;
-    -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, .5);
-    -moz-box-shadow: 0 0 20px rgba(0, 0, 0, .5);
-    box-shadow: 0 0 20px rgba(0, 0, 0, .5);
-}
-
-.slides {
+/*.slides {
     width: 400px;
     height: 360px;
     border: 1px solid white;
@@ -332,40 +269,104 @@ input[type="radio"]:checked + label {
     margin-bottom: 70px;
     background-size: cover;
     background-position: center;
+}*/
+
+.wrapper {
+    position: relative;
+    left: -8px;
+    width: 1860px;
+    height: 500px;
+    background-color: #140c20;
 }
 
-.slide1 {
-    background-image: url(https://seo-o.ru/wp-content/uploads/2023/04/5-1.png);
+.background {
+    width: 1130px;
+    height: 400px;
+    position: relative;
+    left: 285px;
+    top: 50px;
+    overflow: hidden;
 }
 
-.slide2 {
-    background-image: url(https://seo-o.ru/wp-content/uploads/2023/04/0000002522610056236651.png);
+.slideshow {
+  position: relative;
+  width: 500px;
+  height: auto;
 }
 
-.slide3 {
-    background-image: url(https://seo-o.ru/wp-content/uploads/2023/04/0000002522610036651.png);
-}
+.slides {
+    display: flex;
+    width: 363px;
+    height: 300px;
+    transition: transform 0.3s ease-in-out;
+  }
 
-.slide4 {
-    background-image: url(https://seo-o.ru/wp-content/uploads/2023/04/000000252261001.png);
-}
+  .slides img {
+    width: 100%;
+    margin-right: 20px;
+    height: auto;
+  }
+  
+  .controls {
+    width: 190px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    position: absolute;
+    bottom: -75px;
+    left: 500px;
+  }
+  
+  .prev {
+    font-size: 24px;
+    cursor: pointer;
+    padding: 5px;
+  }
+  
+  .next {
+    position: relative;
+    left: 121px;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 5px;
+  }
+  
+  .radio-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    position: relative;
+    right: 40px;
+  }
 
-.slide5 {
-    background-image: url(https://seo-o.ru/wp-content/uploads/2023/04/0000002561001.png);
-}
+  .radio-buttons input[type="radio"] {
+    display: none;
+  }
+  
+  .radio-buttons label {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: gray;
+    cursor: pointer;
+    margin: 0 5px;
+    transition: background ease-in-out .5s;
+  }
 
-.slide6 {
-    background-image: url(https://seo-o.ru/wp-content/uploads/2023/04/5-1.png);
-}
-
-.slide7 {
-    background-image: url(https://seo-o.ru/wp-content/uploads/2023/04/0000002522610056236651.png);
-}
+  .radio-buttons label:hover {
+    background-color: indigo;
+  }
+  
+  .radio-buttons input[type="radio"]:checked + label {
+    background-color: indigo;
+  }
 
 .footer-space {
     background-color: #21192A;
     position: relative;
-    top: 220px;
+    top: 140px;
     width: 1850px;
     height: 100px;
 }
@@ -390,7 +391,7 @@ footer img {
     font-size: 20px;
     text-align: center;
     position: relative;
-    top: -210px;
+    top: -225px;
 }
 
 
