@@ -4,8 +4,13 @@
 <head>
     <link href="bootstrap-5.3.1-dist/css/bootstrap-grid.css" rel="stylesheet">
     <link href="styles-1.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="//slick-1.8.1/slick/css" />
-    <link rel="stylesheet" type="text/css" href="//slick-1.8.1/slick/slick-theme.css" />
+    <link rel="stylesheet" type="text/css" href="slick-1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="slick-1.8.1/slick/slick-theme.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Oswald:wght@200&family=Roboto+Condensed:wght@300&family=Roboto+Slab&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
@@ -31,32 +36,40 @@
     <main>
         <div class="container px-5">
             <div class="row">
-              <div class="image-first-div">
-                <img src="https://mim.in.ua/wordpress/roboit/wp-content/uploads/2022/05/pexels-photo-1714208-2048x1365.webp"
-                    id="first-image" class="col-6" />
-              </div>
+                <div class="image-first-div">
+                    <img src="https://mim.in.ua/wordpress/roboit/wp-content/uploads/2022/05/pexels-photo-1714208-2048x1365.webp"
+                        id="first-image" class="col-6" />
+                </div>
                 <div class="col-6" id="who-we-are">
                     <h2>WHO WE ARE</h2>
                     <h3 class="roboto-family">We Bring Technologies To Your Life</h3>
                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis iste sapiente corporis
                         obcaecati voluptatibus nihil dicta architecto maxime fugiat reprehenderit unde a nam maiores
                         neque accusantium, fuga esse animi! Officia?</p>
-                    <dl class="skills progressbar">
-                        <dt>Coding</dt>
-                        <dd class="coding"><span class="value">79%</span></dd>
-                        <dt>Accuracy</dt>
-                        <dd class="accuracy"><span class="value">95%</span></dd>
-                        <dt>Planning</dt>
-                        <dd class="planning"><span class="value">87%</span></dd>
-                    </dl>
-                    <span class="bar coding-bar progressbar"></span>
-                    <span class="bar accuracy-bar progressbar"></span>
-                    <span class=" bar planning-bar progressbar"></span>
+                    <div class="skills progressbar">
+                        <dl>
+                            <div class="coding-div">
+                                <dt>Coding</dt>
+                                <dd class="coding"><span class="value">79%</span><span
+                                        class="bar coding-bar progressbar"></span></dd>
+                            </div>
+                            <div class="accuracy-div">
+                                <dt>Accuracy</dt>
+                                <dd class="accuracy"><span class="value">95%</span><span
+                                        class="bar accuracy-bar progressbar"></span></dd>
+                            </div>
+                            <div class="planning-div">
+                                <dt>Planning</dt>
+                                <dd class="planning"><span class="value">87%</span><span
+                                        class=" bar planning-bar progressbar"></span></dd>
+                            </div>
+                        </dl>
+                    </div>
                 </div>
             </div>
         </div>
         <h2>FIND OUT MORE WITH</h2>
-        <h3>Innovation Technologies</h3>
+        <h3 class="roboto-family">Innovation Technologies</h3>
         <div class="container">
             <div class="row">
                 <img src="https://mim.in.ua/wordpress/roboit/wp-content/plugins/mim-elementor-widgets-add-on/includes/assets/images/feature-modal-block/default.jpg"
@@ -64,7 +77,7 @@
             </div>
             <div class="row">
                 <div class="col-6">
-                    <h3 class="head-picture">Virtual Reality</h3>
+                    <h3 class="head-picture roboto-family">Virtual Reality</h3>
                     <details>
                         <summary>Explore</summary>
                         <p class="hint">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto
@@ -80,7 +93,7 @@
                     <!--Не получалось иначе, пришлось делать в одном блоке, и увеличивать col-->
                     <img src="https://mim.in.ua/wordpress/roboit/wp-content/uploads/2022/04/pexels-photo-6498961.jpeg"
                         class="col-12">
-                    <h3 class="head-picture">Augmented Reality</h3>
+                    <h3 class="head-picture roboto-family">Augmented Reality</h3>
                     <details>
                         <summary>Explore</summary>
                         <p class="hint">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto
@@ -96,7 +109,7 @@
                     class="col-6">
                 <div class="row">
                     <div class="col-6 justify-content-start">
-                        <h3 class="head-picture">Smart Glasses</h3>
+                        <h3 class="head-picture roboto-family">Smart Glasses</h3>
                         <details>
                             <summary>Explore</summary>
                             <p class="hint">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto pariatur
@@ -114,14 +127,22 @@
         </div>
         <div class="section">
             <div class="slider multiple-items">
-                    <img src="https://seo-o.ru/wp-content/uploads/2023/04/5-1.png" alt="Изображение 1" class="slide" id="1">
-                    <img src="https://seo-o.ru/wp-content/uploads/2023/04/0000002522610056236651.png" alt="Изображение 2" class="slide" id="2">
-                    <img src="https://seo-o.ru/wp-content/uploads/2023/04/0000002522610036651.png" alt="Изображение 3" class="slide" id="3">
-                    <img src="https://seo-o.ru/wp-content/uploads/2023/04/000000252261001.png" alt="Изображение 4" class="slide" id="4">
-                    <img src="https://seo-o.ru/wp-content/uploads/2023/04/5-1.png" alt="Изображение 5" class="slide" id="5">
-                    <img src="https://seo-o.ru/wp-content/uploads/2023/04/000000252261001.png" alt="Изображение 6" class="slide" id="6">
-                    <img src="https://seo-o.ru/wp-content/uploads/2023/04/0000002522610056236651.png" alt="Изображение 7" class="slide" id="7">
-             </div>
+                <a href="https://seo-o.ru/avtomobilnye-pricepy/"><img src="https://seo-o.ru/wp-content/uploads/2023/04/5-1.png" alt="Изображение 1" class="slide"
+                        id="1"><div class="signature">Автомобильные прицепы</div>
+                    </a>
+                <a href="https://seo-o.ru/autsorsing-personala/"><img src="https://seo-o.ru/wp-content/uploads/2023/04/0000002522610056236651.png" alt="Изображение 2"
+                        class="slide" id="2"><div class="signature">Аутсорсинг персонала</div></a>
+                <a href="https://seo-o.ru/med-centr/"><img src="https://seo-o.ru/wp-content/uploads/2023/04/0000002522610036651.png" alt="Изображение 3"
+                        class="slide" id="3"><div class="signature">Мед центр</div></a>
+                <a href="https://seo-o.ru/gruzovye-avtozapchasti/"><img src="https://seo-o.ru/wp-content/uploads/2023/04/000000252261001.png" alt="Изображение 4"
+                        class="slide" id="4"><div class="signature">Грузовые автозапчасти</div></a>
+                <a href="https://seo-o.ru/burenie/"><img src="https://seo-o.ru/wp-content/uploads/2023/04/0000002561001.png" alt="Изображение 5" class="slide"
+                        id="5"><div class="signature">Бурение</div></a>
+                <!--<a href="https://seo-o.ru/avtomobilnye-pricepy/"><img src="https://seo-o.ru/wp-content/uploads/2023/04/000000252261001.png" alt="Изображение 6"
+                        class="slide" id="6"></a>
+                <a href="https://seo-o.ru/avtomobilnye-pricepy/"><img src="https://seo-o.ru/wp-content/uploads/2023/04/0000002522610056236651.png" alt="Изображение 7"
+                        class="slide" id="7"></a>-->
+            </div>
         </div>
     </main>
     <footer>
@@ -130,8 +151,9 @@
                 <img src="landing_logo_x3-transformed.png" class="col-2">
                 <div class="row justify-content-center">
                     <div class="col-6">
-                        <p class="name">ROBOIT</p>
-                        <p class="copyright">© ROBOit - Multipurpose IT&Tech WordPress Theme © All Rights Reserved. 2022</p>
+                        <p class="name roboto-family">ROBOIT</p>
+                        <p class="copyright">© ROBOit - Multipurpose IT&Tech WordPress Theme © All Rights Reserved. 2022
+                        </p>
                     </div>
                 </div>
             </div>

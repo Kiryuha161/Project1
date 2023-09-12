@@ -1,18 +1,21 @@
 body {
     background-color: #21192A;
-    width: 100%;
     color: white;
     font-family: "Oswald", Helvetica, Arial, sans-serif;
+    /*border: 1px solid white;*/
 }
 
-main, footer {
+main,
+footer {
+    width: calc(100% - 12px);
     position: relative;
     top: 75px;
 }
 
 footer {
     position: relative;
-    top: 225px;
+    width: calc(100% - 20px);
+    top: 400px;
 }
 
 .name {
@@ -28,33 +31,32 @@ footer {
 }
 
 .roboto-family {
-    font-family: 'Roboto-black'; 
-	src: local('Roboto-black'),
-		url(roboto-family/Roboto-Black.ttf); 
-}
+    font-family: 'Roboto Condensed', sans-serif;
 
-h2 {
-    text-decoration: underline #cd00cd;
-    text-decoration-thickness: 5px;
-    text-underline-offset: 15px;
-    text-align: center;
-}
-
-h3 {
-    font-size: 40px;
-    text-align: center;
-}
-
-p {
-    font-size: 22px;
-    text-align: center;
 }
 
 li {
     cursor: pointer;
     padding: 0 1.6%;
     font-size: 20px;
-    transform: translate(0, 15px);
+    transform: translate(0, 10%);
+    color: gray;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(58, 55, 55);
+}
+
+a:hover {
+    color: rgb(160, 14, 160);
+}
+
+li {
+    cursor: pointer;
+    padding: 0 1.6%;
+    font-size: 20px;
+    transform: translate(0, 10%);
     color: gray;
 }
 
@@ -72,32 +74,23 @@ ul {
     list-style-type: none;
 }
 
-dl {
-    font-size: 22px;
-    padding: 50px 0 0 0;
-    width: 110%;
-}
-
-dd {
-    background-image: linear-gradient(to right, #351BC0, #cd00cd);
-    height: 17px;
-    margin-bottom: 20px;
-    border-radius: 50px;
-    text-align: right;
-    background-color: white;
-}
-
-summary {
+details>summary {
     font-size: 30px;
-    /*width: 200px;*/
+    list-style: none;
 }
 
-#who-we-are {
-    transform: translate(5%, 0);
+summary:before {
+    content: "+";
+    font-size: 30px;
+    font-weight: bold;
+    padding: 0px 10px;
+    margin: -5px 5px 0 0;
+    background-color: white;
+    color: black;
 }
 
-#who-we-are h2, #who-we-are h3, #who-we-are p{
-    transform: translate(10%, 0);
+details[open] summary:before {
+    content: "-";
 }
 
 .hint {
@@ -107,32 +100,6 @@ summary {
     height: 20%;
 }
 
-.image-first-div {
-    width: 50%;
-    max-height: 560px;
-    overflow: hidden;
-}
-
-#first-image {
-    width: 100%;
-    transform: scale(1.6);
-    position: relative;
-    left: -16%;
-    transition: transform 1.5s;
-}
-
-#first-image:hover {
-    transform: scale(2);
-}
-
-.section {
-    width: 100%;
-    height: 400px;
-    background-color: #191220;
-    position: relative;
-    top: 150px;
-}
-
 .slider {
     width: 71%;
     height: 80%;
@@ -140,23 +107,16 @@ summary {
     position: relative;
     left: 14.5%;
     top: 10%;
-    overflow: hidden;
 }
 
 .slider img {
-    width: 100%;
+    width: 95%;
     height: 250px;
-    margin-right: 20px;
 }
- 
-.slider img {
-    width: 33%;
-    object-fit: cover;
-}
- 
+
 .slick-btn-own {
     position: absolute;
-    z-index: 999;
+    z-index: 1;
     top: 90%;
     cursor: pointer;
     width: 30px;
@@ -169,29 +129,34 @@ summary {
     justify-content: center;
     align-items: center;
 }
- 
+
 .slick-btn-own:hover {
     box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
 }
- 
+
 .slick-btn-own:active {
     box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
 }
- 
+
 .slick-prev {
-    left: 33%;
+    left: 31.5%;
 }
- 
+
 .slick-next {
     right: 33%;
+}
+
+.signature {
+    transform: translate(0, -250px);
+    z-index: 10;
+    background-color: #191220;
+    color: rgb(255, 255, 255);
+    font-size: 25px;
 }
 
 .head-picture {
     text-align: left;
 }
-
-
-
 
 .navigation {
     width: 70%;
@@ -207,7 +172,7 @@ summary {
 .navigation img {
     position: absolute;
     top: 10%;
-    left: 4%;
+    left: 3%;
     height: 50%;
     width: 10%;
 }
@@ -220,54 +185,434 @@ summary {
     color: black;
 }
 
-
 .panel {
     display: flex;
     justify-content: right;
     align-items: center;
 }
 
-
-
 .coding {
-    width: 71%;
+    width: calc(71% - 100px);
     background-color: #cd00cd;
     z-index: -1;
 }
 
 .accuracy {
-    width: 95%;
+    width: calc(95% - 100px);
 }
 
 .planning {
-    width: 87%;
+    width: calc(87% - 100px);
+}
+
+
+.coding-div,
+.accuracy-div,
+.planning-div {
+    width: 90%;
 }
 
 .bar {
     display: block;
-    position: relative;
-    right: -50px;
-    width: 700px;
-    height: 17px;
+    position: absolute;
+    right: 25px;
+    min-width: calc(100% - 80px);
+    min-height: 17px;
     background-color: white;
     border-radius: 50px;
     z-index: -1;
 }
 
 .coding-bar {
-    bottom: 165px;
+    bottom: 160px;
 }
 
 .accuracy-bar {
-    bottom: 119px;
+    bottom: 91px;
 }
 
 .planning-bar {
-    bottom: 73px;
+    bottom: 22px;
 }
 
 .value {
     position: relative;
-    right: -25px;
-    top: -25px;
+    right: -2%;
+    top: -170%;
+}
+
+.section {
+    width: calc(100% - 1px);
+    height: 400px;
+    background-color: #191220;
+    position: relative;
+    top: 300px;
+}
+
+@media (min-width: 1200px) {
+    h2 {
+        text-decoration: underline #cd00cd;
+        text-decoration-thickness: 5px;
+        text-underline-offset: 15px;
+        text-align: center;
+        font-family: 'Roboto Condensed', sans-serif
+    }
+
+    h3 {
+        font-size: 40px;
+        text-align: center;
+        font-family: 'Oswald', sans-serif;
+    }
+
+    p {
+        font-size: 22px;
+        text-align: center;
+        font-family: 'Roboto Condensed', sans-serif;
+    }
+
+    dl {
+        font-size: 22px;
+        padding: 50px 0 0 0;
+        width: 110%;
+    }
+
+    dd {
+        background-image: linear-gradient(to right, #351BC0, #cd00cd);
+        height: 17px;
+        margin-bottom: 20px;
+        border-radius: 50px;
+        text-align: right;
+        background-color: white;
+    }
+
+    .skills {
+        width: 100%;
+        overflow: hidden;
+        transform: translate(0, -80px);
+    }
+
+    #who-we-are {
+        transform: translate(5%, 0);
+    }
+
+    #who-we-are h2,
+    #who-we-are h3,
+    #who-we-are p {
+        transform: translate(10%, 0);
+    }
+
+    .image-first-div {
+        width: 50%;
+        max-height: 560px;
+        overflow: hidden;
+    }
+
+    #first-image {
+        width: 100%;
+        transform: scale(1.6);
+        position: relative;
+        left: -16%;
+        transition: transform 1.5s;
+    }
+
+    #first-image:hover {
+        transform: scale(2);
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) /*and (orientation: portrait)*/ {
+    h2 {
+        text-decoration: underline #cd00cd;
+        text-decoration-thickness: 5px;
+        font-size: 25px;
+        text-underline-offset: 15px;
+        text-align: center;
+        font-family: 'Roboto Condensed', sans-serif
+    }
+
+    h3 {
+        font-size: 25px;
+        text-align: center;
+        font-family: 'Oswald', sans-serif;
+    }
+
+    p {
+        font-size: 20px;
+        text-align: center;
+        font-family: 'Roboto Condensed', sans-serif;
+    }
+
+    dl {
+        font-size: 22px;
+        padding: 45px 0 0 0;
+        width: 110%;
+    }
+
+    dd {
+        background-image: linear-gradient(to right, #351BC0, #cd00cd);
+        height: 17px;
+        margin-bottom: 20px;
+        border-radius: 50px;
+        text-align: right;
+        background-color: white;
+    }
+
+    .skills {
+        width: 100%;
+        overflow: hidden;
+        transform: translate(0, -80px);
+    }
+
+    #who-we-are {
+        transform: translate(5%, 0);
+    }
+
+    #who-we-are h2,
+    #who-we-are h3,
+    #who-we-are p {
+        transform: translate(10%, 0);
+    }
+
+    .image-first-div {
+        width: 50%;
+        max-height: 560px;
+        overflow: hidden;
+    }
+
+    #first-image {
+        width: 100%;
+        transform: scale(1.6);
+        position: relative;
+        left: -16%;
+        transition: transform 1.5s;
+    }
+
+    #first-image:hover {
+        transform: scale(2);
+    }
+}
+
+/* Portrait tablets and small desktops */
+@media (min-width: 768px) and (max-width: 991px) {
+    h2 {
+        text-decoration: underline #cd00cd;
+        text-decoration-thickness: 5px;
+        font-size: 20px;
+        text-underline-offset: 15px;
+        text-align: center;
+        font-family: 'Roboto Condensed', sans-serif;
+
+    }
+
+    h3 {
+        font-size: 20px;
+        text-align: center;
+        font-family: 'Oswald', sans-serif;
+
+    }
+
+    p {
+        font-size: 16px;
+        text-align: center;
+        font-family: 'Roboto Condensed', sans-serif;
+    }
+
+    dl {
+        font-size: 22px;
+        padding: 45px 0 0 0;
+        width: 110%;
+    }
+
+    dd {
+        background-image: linear-gradient(to right, #351BC0, #cd00cd);
+        height: 17px;
+        margin-bottom: 20px;
+        border-radius: 50px;
+        text-align: right;
+        background-color: white;
+    }
+
+    .skills {
+        width: 100%;
+        overflow: hidden;
+        transform: translate(0, -80px);
+    }
+
+    #who-we-are {
+        transform: translate(5%, 0);
+    }
+
+    #who-we-are h2,
+    #who-we-are h3,
+    #who-we-are p {
+        transform: translate(10%, 0);
+    }
+
+    .image-first-div {
+        width: 50%;
+        max-height: 560px;
+        overflow: hidden;
+    }
+
+    #first-image {
+        width: 100%;
+        transform: scale(1.6);
+        position: relative;
+        left: -16%;
+        transition: transform 1.5s;
+    }
+
+    #first-image:hover {
+        transform: scale(2);
+    }
+}
+
+/* Landscape phones and portrait tablets */
+@media (max-width: 767px) {
+    h2 {
+        text-decoration: underline #cd00cd;
+        text-decoration-thickness: 5px;
+        font-size: 20px;
+        text-underline-offset: 15px;
+        text-align: center;
+        font-family: 'Roboto Condensed', sans-serif;
+
+    }
+
+    h3 {
+        font-size: 20px;
+        text-align: center;
+        font-family: 'Oswald', sans-serif;
+
+    }
+
+    p {
+        font-size: 10px;
+        text-align: center;
+        font-family: 'Roboto Condensed', sans-serif;
+    }
+
+    dl {
+        font-size: 22px;
+        padding: 45px 0 0 0;
+        width: 110%;
+    }
+
+    dd {
+        background-image: linear-gradient(to right, #351BC0, #cd00cd);
+        height: 17px;
+        margin-bottom: 20px;
+        border-radius: 50px;
+        text-align: right;
+        background-color: white;
+    }
+
+    .skills {
+        width: 100%;
+        overflow: hidden;
+        transform: translate(0, -80px);
+    }
+
+    #who-we-are {
+        transform: translate(5%, 0);
+    }
+
+    #who-we-are h2,
+    #who-we-are h3,
+    #who-we-are p {
+        transform: translate(10%, 0);
+    }
+
+    .image-first-div {
+        width: 50%;
+        max-height: 560px;
+        overflow: hidden;
+    }
+
+    #first-image {
+        width: 100%;
+        transform: scale(1.6);
+        position: relative;
+        left: -16%;
+        transition: transform 1.5s;
+    }
+
+    #first-image:hover {
+        transform: scale(2);
+    }
+}
+
+/* Portrait phones and smaller */
+@media (max-width: 360px) {
+    h2 {
+        text-decoration: underline #cd00cd;
+        text-decoration-thickness: 5px;
+        font-size: 20px;
+        text-underline-offset: 15px;
+        text-align: center;
+        font-family: 'Roboto Condensed', sans-serif;
+
+    }
+
+    h3 {
+        font-size: 20px;
+        text-align: center;
+        font-family: 'Oswald', sans-serif;
+
+    }
+
+    p {
+        font-size: 16px;
+        text-align: center;
+        font-family: 'Roboto Condensed', sans-serif;
+    }
+
+    dl {
+        font-size: 22px;
+        padding: 45px 0 0 0;
+        width: 110%;
+    }
+
+    dd {
+        background-image: linear-gradient(to right, #351BC0, #cd00cd);
+        height: 17px;
+        margin-bottom: 20px;
+        border-radius: 50px;
+        text-align: right;
+        background-color: white;
+    }
+
+    .skills {
+        width: 100%;
+        overflow: hidden;
+        transform: translate(0, -80px);
+    }
+
+    #who-we-are {
+        transform: translate(5%, 0);
+    }
+
+    #who-we-are h2,
+    #who-we-are h3,
+    #who-we-are p {
+        transform: translate(10%, 0);
+    }
+
+    .image-first-div {
+        width: 50%;
+        max-height: 560px;
+        overflow: hidden;
+    }
+
+    #first-image {
+        width: 100%;
+        transform: scale(1.6);
+        position: relative;
+        left: -16%;
+        transition: transform 1.5s;
+    }
+
+    #first-image:hover {
+        transform: scale(2);
+    }
 }

@@ -3,6 +3,7 @@ $(document).ready(function(){
         infinite: true,
         autoplay: true,
         slidesToShow: 3,
+        dots: true,
         slidesToScroll: 1,
         prevArrow: '<div class="slick-btn-own slick-prev">&#8592;</div>',
         nextArrow: '<div class="slick-btn-own slick-next">&#8594;</div>'
